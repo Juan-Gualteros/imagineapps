@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+    <h3><b>¿Qué estás buscando?</b></h3>
+    </div>
+<div class="col-6" style="text-align: right;">
+    <a href="">Ver todas las soluciones <mat-icon fontIcon="trending_flat"></mat-icon></a>
+</div>
+</div>
+
+    <div class="row">
+    <div class="card" *ngFor="let items of items" style="width: 25%;">
+        <img [attr.src]="items.img" alt="logo" width="40%">
+        <h4>{{items.title}}</h4>
+        <p>{{items.content}}</p>
+        <div class="card" style="width: 30%; align-items: center;  align-content: center;">
+            <mat-icon fontIcon="person"></mat-icon>{{items.cantidad}}
+        </div>
+        <br>
+    </div>
+</div>
+</div>

@@ -1,0 +1,39 @@
+<div class="card" style="width: 35%;">
+  <div class="card-body">
+
+    <h2>Para todas tus formas de trabajo, estamos aqui</h2>
+
+    <p>Encuentra una ubicación cerca de ti. Explora las membresías y las oficinas listas para mudarse para particulares
+      o empresas de todos los tamaños.</p>
+    <div class="row">
+      <mat-form-field>
+        <mat-label> Esncuentra espacio de trabajo en</mat-label>
+        <mat-select style="width: 100%;">
+          <mat-option>Colombia</mat-option>
+          <mat-option>Estados Unidos</mat-option>
+          <mat-option>Brasil</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <button type="button" class="btn btn-primary">Comenzar</button>
+    </div>
+  </div>
+</div>
+
+
+  <div>
+  <owl-carousel-o [options]="customOptions">
+    test
+    <ng-container *ngFor="let item of slidesStore">
+      <ng-template let-owlItem carouselSlide [id]="item.id">
+        <div [id]="item.id" class="timeline-carousel__item slide" [ngClass]="{ 'center-card': !owlItem.isCentered }">
+          <div class="timeline-carousel__image">
+            <div style="border-radius: 12px" class="media-wrapper media-wrapper--overlay" >
+                <img [src]="item.img" alt=""></div>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div>
